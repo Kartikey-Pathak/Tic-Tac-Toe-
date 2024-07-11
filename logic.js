@@ -1,16 +1,15 @@
 console.log("Hello Wolrd");
-
 let boxes=document.querySelectorAll(".box");
 
-let resetbtn=document.getElementById('reset-butn');
+let resetbtn=document.querySelector("#reset-butn");
 
 let msg=document.querySelector("#win-msg");
 
 let msgcontain=document.querySelector(".win-msg-contain");
 
-let playxtext=document.querySelector(".playx");
+//let playxtext=document.querySelector(".playx");
 
-let playotext=document.querySelector(".playo");
+//let playotext=document.querySelector(".playo");
 
 let newbtn=document.querySelector(".new-game")
 
@@ -31,20 +30,21 @@ boxes.forEach((box) =>{
      box.addEventListener("click",() => {
     if(turnx===true)
         {
-            playxtext.classList.add("hide");
-            playotext.classList.remove("hide");
+            //playxtext.classList.add("hide");
+            //playotext.classList.remove("hide");
             turnx=false;
             box.innerText="X";
             box.disabled=true;
         }
         else if(turnx===false)
             {
-                playxtext.classList.remove("hide");
-                playotext.classList.add("hide");
+
+                //playxtext.classList.remove("hide");
+                //playotext.classList.add("hide");
                 turnx=true;
                 box.innerText="O";
                 box.disabled=true;
-            }
+        }
             checkwinner();
      })
 })
@@ -75,9 +75,11 @@ const winner=(val)=>{
     newbtn.classList.remove("hide");
    boxes.forEach(box => {
     box.style.backgroundColor="#1A2130";
+    box.style.color="white";
+    document.querySelector(".heading").style.color="black";
    });
-   playotext.classList.add("hide");
-   playxtext.classList.add("hide");
+   //playotext.classList.add("hide");
+   //playxtext.classList.add("hide");
 }
 
 const disablebtn=()=>{
@@ -92,21 +94,20 @@ const enablebtn=()=>{
     }
 }
 //reset Button
-let resetfunc=()=>{
+let resetfunc =()=>{
         turnx=true;
         enablebtn();
         msgcontain.classList.add("hide");
         console.log("btn press")
-        document.querySelector("body").style.backgroundColor="#36BA98";
+        document.querySelector("body").style.backgroundColor="#211951";
+        document.querySelector(".heading").style.color="white";
         newbtn.classList.add("hide");
         boxes.forEach(box => {
-            box.style.backgroundColor="#E9C46A";
+            box.style.backgroundColor="#15F5BA";
+            box.style.color="black";
            });
-           playotext.classList.add("hide");
-           playxtext.classList.remove("hide");
+           //playotext.classList.add("hide");
+           //playxtext.classList.remove("hide");
 }
-
 resetbtn.addEventListener("click", resetfunc);
-
 newbtn.addEventListener("click", resetfunc);
-
