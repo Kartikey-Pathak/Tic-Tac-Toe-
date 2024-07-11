@@ -3,9 +3,13 @@
     padding: 0;
 }
 body{
-    background-color: #36BA98;
+    background-color: #211951;
     text-align: center;
     transition: 1.5s;
+}
+.heading{
+    color: white;
+    background-color: #009FBD;
 }
 .container{
     height: 70vh;
@@ -28,8 +32,8 @@ body{
     border-radius: 1rem;
     border: none;
     font-size: 9vmin;
-    color: #E76F51;
-    background-color: #E9C46A;
+    color: black;
+    background-color: #15F5BA;
 }
 #reset-butn{
     padding: 1rem;
@@ -63,17 +67,50 @@ body{
     transition: 1.5s;
 }
 h1{
-    font-size: 3rem;
+    font-size: 8vmin;
     font-weight:900;
 }
 .playx{
-    width: 250px;
-    margin-left: 130px;
-    font-size: 4rem;
+    width: 30vmin;
+    margin-left: 30vmin;
+    font-size: 7vmin;
 }
 .playo{
-    width: 250px;
-    margin-left: 1100px;
-    margin-top: -10px;
-    font-size: 4rem;
+    width: 30vmin;
+    margin-left: 150vmin;
+    margin-top: -5vmin;
+    font-size: 7vmin;
+}
+.home-btn{
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: larger;
+    height: 9vmin;
+    width: 22vmin;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-decoration: none;
+    color: #0D1282;
+}
+.home{
+    margin-left: 5vmin;
+    height: 5vmin;
+    width: 14vmin;
+    background-color: #EEEDED;
+    border: 5px solid #F0DE36;
+    margin-top: -5vmin;
+border-radius: 2.5vmin;
+justify-content: center;
+align-items: center;
+display: flex;    
+}
+.home:hover{
+    transition: 0.5s;
+    background-color: #F4A261;
+    border: 5px solid #F4A261;
+}
+.home-btn:hover{
+    transition: 0.5s;
+    color: black;
 }
